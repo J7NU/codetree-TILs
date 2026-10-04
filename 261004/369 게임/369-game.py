@@ -1,13 +1,7 @@
 n = int(input())
-start = 1
 
-while n >= start:
-    if start % 3 == 0:
-        print(0,end=" ")
-    elif start // 10 == 3 or start // 10 == 6 or start // 10 == 9:
-        print(0,end=" ")
-    elif start % 10 == 3 or start % 10 == 6 or start % 10 == 9:
-        print(0,end=" ")
+for i in range(1, n + 1):
+    if i % 3 == 0 or i // 10 in (3, 6, 9) or i % 10 in (3, 6, 9):
+        print(0, end=" ")
     else:
-        print(start,end=" ")
-    start += 1 
+        print(i, end=" ")
